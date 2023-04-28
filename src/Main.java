@@ -19,8 +19,10 @@ public class Main {
     public static void task1() {
         System.out.println("Задача 1:");
         int[] arr = generateRandomArray();
+        int sum=0;
         for (int i = 0; i < arr.length; i++)
-            System.out.printf("Сумма трат за месяц составила %s рублей %n", arr[i]);
+            sum += arr[i];
+            System.out.printf("Сумма трат за месяц составила %s рублей %n", sum);
     }
 
 
@@ -42,8 +44,8 @@ public class Main {
         System.out.println("Задача 3:");
         int[] arr = generateRandomArray();
         int sum = 0;
-        for (int i = 0; i < arr.length; i++)
-            sum += arr[i];
+        for (int e : arr)
+            sum += e;
         double midleSpend = sum / arr.length;
         System.out.printf("Средняя сумма трат за месяц составила %s рублей %n", midleSpend);
     }
